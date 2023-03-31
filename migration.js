@@ -15,13 +15,10 @@ const quizShema = new mongoose.Schema({
 
 const Quiz2 = mongoose.model("quiz2", quizShema);
 
-
 const azin = new Quiz2({
   name: "azin",
   sid: 300365490,
 });
-
-
 
 Quiz2.insertMany([azin], function (err) {
   if (err) {
@@ -31,4 +28,3 @@ Quiz2.insertMany([azin], function (err) {
     mongoose.connection.close();
   }
 });
-
