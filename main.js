@@ -5,9 +5,11 @@ app = express();
 
 const PORT = process.env.PORT || 7000;
 
-mongoose.connect(
-  "mongodb+srv:// tempuser:123@cluster0.f9d6o.gcp.mongodb.net/Exam"
-);
+// mongoose.connect("mongodb+srv://azin:azin@cluster0.y4rr3j5.mongodb.net/Exam", {
+mongoose.connect("mongodb+srv:// tempuser:123@cluster0.f9d6o.gcp.mongodb.net/Exam", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const QuizSchema = new mongoose.Schema({
   name: {
@@ -16,7 +18,6 @@ const QuizSchema = new mongoose.Schema({
   },
   Sid: {
     type: String,
-    required: true,
   },
 });
 
