@@ -32,11 +32,3 @@ Quiz2.insertMany([azin], function (err) {
   }
 });
 
-// if it was only one record then
-// const azin = new User({
-//     name: "azin",
-//     email: "azin@company.org",
-//     fav_pizza: "Pepperoni",
-//     sid: 826488,
-//   });
-// user.save();
